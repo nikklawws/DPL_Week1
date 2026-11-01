@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 
 # Follow the tasks below to practice basic Python concepts.
 # Write your code in between the dashed lines.
@@ -13,7 +13,11 @@ import numpy
 # Your code here:
 # -----------------------------------------------
 
-def step
+def step(x: int | float) -> int:
+    if(x > 0):
+        return 1
+    else:
+        return -1
 
 
 # -----------------------------------------------
@@ -28,7 +32,8 @@ def step
 
 # Your code here:
 # -----------------------------------------------
-def ReLu
+def ReLu(x: np.ndarray, cutoff = 0) -> np.ndarray:
+    return np.maximum(x, cutoff)
 
 
 # -----------------------------------------------
@@ -44,7 +49,8 @@ def ReLu
 # Your code here:
 # -----------------------------------------------
 
-def neural_net_layer
-
+def neural_net_layer(matrix: np.ndarray, vector: np.ndarray) -> np.ndarray:
+    weights = matrix @ vector
+    return ReLu(weights)
 
 # ------------------------------------------
